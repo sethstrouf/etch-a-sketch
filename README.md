@@ -8,5 +8,5 @@ What I learned:
 What I need to do:
  - Get better at working with RGB values through Javascript
  - Code the option task of shading in a square with 10% of black every click
- - Bug: when selecting a new color, deletes squares because bg gets turned to alpha of 0
-        -probably just need to reset the board completely
+ - FIXED!
+       -Bug: when selecting a new color, deletes squares because bg gets turned to alpha of 0

@@ -49,13 +49,15 @@ function onHover() {
                 break
         }
     }
+    currentBgColor = this.style.backgroundColor;
     this.style.backgroundColor = bgColor;
 }
 
 function offHover() {
     //if no painted class, take away hover color
     if(this.getAttribute("class")==="grid-box") {
-            this.style.backgroundColor = "rgba(0,0,0,0)";
+            // this.style.backgroundColor = "rgba(0,0,0,0)";
+        this.style.backgroundColor = currentBgColor;
     }
 }
 
@@ -76,10 +78,11 @@ const select = document.getElementById("select");
 let isRainbow = false;
 let bgColor =  select.options[select.selectedIndex].value;
 const gridContainer = document.querySelector(".grid-container");
+let currentBgColor = gridContainer.style.backgroundColor;
 let gridBoxes;
 const resetButton = document.getElementById("reset");
 //default grid
-createBoxes(8);
+createBoxes(32);
 
 resetButton.addEventListener("click", () => {
     let num = prompt("Enter how many boxes per side (1-100)");

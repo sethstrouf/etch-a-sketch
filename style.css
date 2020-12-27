@@ -77,7 +77,7 @@ select {
 }
 
 .grid-box {
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 
 @media all and (max-width: 500px) {
